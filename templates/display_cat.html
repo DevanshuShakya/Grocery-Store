@@ -1,0 +1,87 @@
+{% extends 'user_dashboard.html' %}
+{% block content %}
+<div class="bee-row bee-row-4">
+    <div class="bee-row-content">
+        <div class="bee-col bee-col-1 bee-col-w2">
+            <div class="bee-block bee-block-1 bee-heading">
+                <h3
+                    style="color:#7c7c7c;direction:ltr;font-family:Arial, 'Helvetica Neue', Helvetica, sans-serif;font-size:24px;font-weight:700;letter-spacing:normal;line-height:120%;text-align:left;margin-top:0;margin-bottom:0;">
+                    <span class="tinyMce-placeholder">Categories</span>
+                </h3>
+            </div>
+            <div class="bee-block bee-block-2 bee-menu">
+                <nav class="bee-menu"><input class="bee-hamburger-trigger" id="bee-hamburger-memu-r3c0m1"
+                        type="checkbox" /><label class="bee-hamburger-controls" for="bee-hamburger-memu-r3c0m1"><span
+                            class="bee-hamburger-open"></span><span class="bee-hamburger-close"></span></label>
+                    <ul class="bee-vertical with-bee-hamburger">
+                        {% for category in categories%}
+                        <a href="{{ url_for('display_cat',cat_id=category.cat_id)}}" style="text-decoration: None;">
+                            <li style="padding:5px;">{{ category.cat_name }}</li>
+                        </a>
+                        <hr>
+                        {% endfor %}
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="bee-col bee-col-2 bee-col-w10">
+            <div class="bee-block bee-block-1 bee-heading">
+                <h1
+                style="color:#5d5e5e;direction:ltr;font-family:Arial, Helvetica, sans-serif;font-size:40px;font-weight:700;letter-spacing:normal;line-height:120%;text-align:left;margin-top:0;margin-bottom:0;">
+                <span class="tinyMce-placeholder">{{category.cat_name}}</span>
+            </h1>
+            </div>
+            <div class="bee-block bee-block-2 bee-paragraph">
+                <p>&nbsp;&nbsp;&nbsp;{{ category.description}}</p>
+            </div>
+            <br>
+            <div class="bee-block bee-block-3 bee-html-block">
+                <div class="our-class">
+
+                    <!-- I am HTML block -->
+
+                    <div class="container" style="background-color: #f2f7f9; text-align: center; padding-left: 30px;">
+
+                        <div class="row row-cols-1 row-cols-md-5 g-4">
+                            {% for product in products %}
+            
+            
+                            <div class="col">
+                                <div class="card h-100" style="background-color: #f2f7f9; border: None;">
+                                    <img src="{{ url_for('get_image', filename=product.prod_name)}}" class="card-img-top"
+                                        alt="Uploaded Image">
+                                    <div class="card-body" style="background-color: #f1f1f3;">
+										<a href="{{url_for('product',prod_id=product.prod_id)}}" style="text-decoration: None; color: black; font-family: Montserrat ;">
+
+                                        <h5 class="card-title"></h5>
+                                        <p class="card-text">{{product.prod_name}}</p>
+                                        </a>
+                                    </div>
+                                    <div class="card-footer" style="border: None; ;">
+                                            
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-rupee" viewBox="0 0 16 16">
+                                            <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z"/>
+                                          </svg>{{product.rate_per_unit}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        
+                                       <a href="{{ url_for('add_to_cart',prod_id=product.prod_id) }}" style='background-color: #0b4341; border:none;' class="btn btn-primary">Buy</a>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+            
+                            {% endfor %}
+            
+            
+            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

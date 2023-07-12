@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+
+   
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css" />
+    <style>
+        .bee-row,
+        .bee-row-content {
+            position: relative
+        }
+
+        .bee-button .content {
+            text-align: center
+        }
+
+        body {
+            background-color: #f2f7f9;
+            color: #000;
+            font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif
+        }
+
+        .bee-row-1 .bee-col-2 .bee-block-1 li a,
+        a {
+            color: #0b4341
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body,
+        h1,
+        h2,
+        p {
+            margin: 0
+        }
+
+        .bee-menu .bee-hamburger-trigger {
+            display: none
+        }
+
+        .bee-row-content {
+            max-width: 910px;
+            margin: 0 auto;
+            display: flex
+        }
+
+        .bee-row-content.reverse,
+        .bee-row-content.reverse .bee-col {
+            -moz-transform: scale(1, -1);
+            -webkit-transform: scale(1, -1);
+            -o-transform: scale(1, -1);
+            -ms-transform: scale(1, -1);
+            transform: scale(1, -1)
+        }
+
+        .bee-row-content .bee-col-w2 {
+            flex-basis: 17%
+        }
+
+        .bee-row-content .bee-col-w3 {
+            flex-basis: 25%
+        }
+
+        .bee-row-content .bee-col-w5 {
+            flex-basis: 42%
+        }
+
+        .bee-row-content .bee-col-w6 {
+            flex-basis: 50%
+        }
+
+        .bee-row-content .bee-col-w7 {
+            flex-basis: 58%
+        }
+
+        .bee-row-content .bee-col-w9 {
+            flex-basis: 75%
+        }
+
+        .bee-row-content .bee-col-w12 {
+            flex-basis: 100%
+        }
+
+        .bee-button a,
+        .bee-icon .bee-icon-label-right a,
+        .bee-menu ul li a {
+            text-decoration: none
+        }
+
+        .bee-divider,
+        .bee-image {
+            overflow: auto
+        }
+
+        .bee-divider .center,
+        .bee-image .bee-center {
+            margin: 0 auto
+        }
+
+        .bee-row-10 .bee-col-1 .bee-block-1,
+        .bee-row-10 .bee-col-2 .bee-block-1,
+        .bee-row-10 .bee-col-3 .bee-block-1,
+        .bee-row-10 .bee-col-4 .bee-block-1,
+        .bee-row-12 .bee-col-1 .bee-block-1,
+        .bee-row-12 .bee-col-2 .bee-block-1,
+        .bee-row-12 .bee-col-3 .bee-block-1,
+        .bee-row-12 .bee-col-4 .bee-block-1,
+        .bee-row-14 .bee-col-1 .bee-block-1,
+        .bee-row-14 .bee-col-2 .bee-block-1,
+        .bee-row-14 .bee-col-3 .bee-block-1,
+        .bee-row-14 .bee-col-4 .bee-block-1,
+        .bee-row-14 .bee-col-5 .bee-block-1,
+        .bee-row-14 .bee-col-6 .bee-block-1,
+        .bee-row-2 .bee-col-2 .bee-block-1,
+        .bee-row-6 .bee-col-1 .bee-block-1,
+        .bee-row-6 .bee-col-2 .bee-block-1,
+        .bee-row-6 .bee-col-3 .bee-block-1,
+        .bee-row-6 .bee-col-4 .bee-block-1,
+        .bee-row-8 .bee-col-1 .bee-block-1,
+        .bee-row-8 .bee-col-2 .bee-block-1,
+        .bee-row-8 .bee-col-3 .bee-block-1,
+        .bee-row-8 .bee-col-4 .bee-block-1 {
+            width: 100%
+        }
+
+        .bee-menu ul {
+            margin: 0;
+            padding: 0
+        }
+
+        .bee-icon {
+            display: inline-block;
+            vertical-align: middle
+        }
+
+        .bee-icon .bee-content {
+            display: flex;
+            align-items: center
+        }
+
+        .bee-image img {
+            display: block;
+            width: 100%
+        }
+
+        .bee-menu .bee-hamburger-controls {
+            cursor: pointer;
+            display: inline-block;
+            position: relative
+        }
+
+        .bee-menu .bee-hamburger-controls span {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            transition: .12s ease-in-out
+        }
+
+        .bee-menu ul {
+            list-style-type: none
+        }
+
+        .bee-menu ul.bee-horizontal li {
+            display: inline-block
+        }
+
+        .bee-social .icon img {
+            max-height: 32px
+        }
+
+        .bee-text {
+            overflow-wrap: anywhere
+        }
+
+        .bee-row-1,
+        .bee-row-14,
+        .bee-row-15,
+        .bee-row-16,
+        .bee-row-17,
+        .bee-row-2 {
+            background-color: #f2f7f9;
+            background-repeat: no-repeat
+        }
+
+        .bee-row-1 .bee-row-content,
+        .bee-row-10 .bee-row-content,
+        .bee-row-12 .bee-row-content,
+        .bee-row-16 .bee-row-content,
+        .bee-row-17 .bee-row-content,
+        .bee-row-18 .bee-row-content,
+        .bee-row-19 .bee-row-content,
+        .bee-row-2 .bee-row-content,
+        .bee-row-20 .bee-row-content,
+        .bee-row-21 .bee-row-content,
+        .bee-row-3 .bee-row-content,
+        .bee-row-4 .bee-row-content,
+        .bee-row-6 .bee-row-content,
+        .bee-row-8 .bee-row-content {
+            background-repeat: no-repeat;
+            color: #000
+        }
+
+        .bee-row-1 .bee-col-1 {
+            padding: 20px 25px
+        }
+
+        .bee-row-1 .bee-col-1 .bee-block-1,
+        .bee-row-19 .bee-col-1 .bee-block-1 {
+            padding-top: 10px;
+            width: 100%
+        }
+
+        .bee-row-1 .bee-col-2 {
+            background-color: #f2f7f9;
+            padding: 20px 25px
+        }
+
+        @media (max-width:930px) {
+            .bee-row-1 .bee-col-2 {
+                padding: 20px 25px !important
+            }
+        }
+
+        .bee-row-1 .bee-col-2 .bee-block-1 {
+            color: #0b4341;
+            font-family: inherit;
+            font-size: 18px;
+            text-align: right
+        }
+
+        .bee-row-2 .bee-col-1 {
+            padding: 35px 25px 40px
+        }
+
+        .bee-row-2 .bee-col-1 .bee-block-1 {
+            text-align: center;
+            width: 100%
+        }
+
+        .bee-row-2 .bee-col-1 .bee-block-2 {
+            padding-top: 25px
+        }
+
+        .bee-row-2 .bee-col-1 .bee-block-3 {
+            padding-top: 20px
+        }
+
+        .bee-row-2 .bee-col-1 .bee-block-4 {
+            padding-top: 25px;
+            text-align: center
+        }
+
+        .bee-row-2 .bee-col-2 {
+            padding-left: 25px;
+            padding-right: 25px
+        }
+
+        .bee-row-4 {
+            background-color: #f2f7f9;
+        }
+
+        .bee-row-10,
+        .bee-row-11,
+        .bee-row-12,
+        .bee-row-13,
+        .bee-row-21,
+        .bee-row-3,
+        .bee-row-4,
+        .bee-row-5,
+        .bee-row-6,
+        .bee-row-7,
+        .bee-row-8,
+        .bee-row-9 {
+            background-repeat: no-repeat
+        }
+
+        .bee-row-17 .bee-col-1 .bee-block-1,
+        .bee-row-18 .bee-col-1 .bee-block-1,
+        .bee-row-20 .bee-col-1 .bee-block-1,
+        .bee-row-3 .bee-col-1 .bee-block-1 {
+            padding: 10px
+        }
+
+        .bee-row-4 .bee-col-1 {
+            padding: 20px 25px 5px
+        }
+
+        .bee-row-4 .bee-col-1 .bee-block-1 {
+            padding-bottom: 25px;
+            text-align: center;
+            width: 100%
+        }
+
+        .bee-row-11 .bee-row-content,
+        .bee-row-13 .bee-row-content,
+        .bee-row-5 .bee-row-content,
+        .bee-row-7 .bee-row-content,
+        .bee-row-9 .bee-row-content {
+            background-repeat: no-repeat;
+            border-radius: 0;
+            color: #000
+        }
+
+        .bee-row-11 .bee-col-1,
+        .bee-row-13 .bee-col-1,
+        .bee-row-21 .bee-col-1,
+        .bee-row-5 .bee-col-1,
+        .bee-row-7 .bee-col-1,
+        .bee-row-9 .bee-col-1 {
+            padding-bottom: 5px;
+            padding-top: 5px
+        }
+
+        .bee-row-11 .bee-col-1 .bee-block-1,
+        .bee-row-13 .bee-col-1 .bee-block-1,
+        .bee-row-5 .bee-col-1 .bee-block-1,
+        .bee-row-7 .bee-col-1 .bee-block-1,
+        .bee-row-9 .bee-col-1 .bee-block-1 {
+            padding: 10px;
+            text-align: center;
+            width: 100%
+        }
+
+        .bee-row-10 .bee-col-1,
+        .bee-row-10 .bee-col-3,
+        .bee-row-10 .bee-col-4,
+        .bee-row-12 .bee-col-1,
+        .bee-row-12 .bee-col-3,
+        .bee-row-12 .bee-col-4,
+        .bee-row-19 .bee-col-1,
+        .bee-row-19 .bee-col-2,
+        .bee-row-6 .bee-col-1,
+        .bee-row-6 .bee-col-3,
+        .bee-row-6 .bee-col-4,
+        .bee-row-8 .bee-col-1,
+        .bee-row-8 .bee-col-3,
+        .bee-row-8 .bee-col-4 {
+            padding: 15px 25px
+        }
+
+        .bee-row-10 .bee-col-1 .bee-block-2,
+        .bee-row-10 .bee-col-2 .bee-block-2,
+        .bee-row-10 .bee-col-3 .bee-block-2,
+        .bee-row-10 .bee-col-4 .bee-block-2,
+        .bee-row-12 .bee-col-1 .bee-block-2,
+        .bee-row-12 .bee-col-2 .bee-block-2,
+        .bee-row-12 .bee-col-3 .bee-block-2,
+        .bee-row-12 .bee-col-4 .bee-block-2,
+        .bee-row-14 .bee-col-1 .bee-block-2,
+        .bee-row-14 .bee-col-2 .bee-block-2,
+        .bee-row-14 .bee-col-3 .bee-block-2,
+        .bee-row-14 .bee-col-4 .bee-block-2,
+        .bee-row-14 .bee-col-5 .bee-block-2,
+        .bee-row-14 .bee-col-6 .bee-block-2,
+        .bee-row-6 .bee-col-1 .bee-block-2,
+        .bee-row-6 .bee-col-2 .bee-block-2,
+        .bee-row-6 .bee-col-3 .bee-block-2,
+        .bee-row-6 .bee-col-4 .bee-block-2,
+        .bee-row-8 .bee-col-1 .bee-block-2,
+        .bee-row-8 .bee-col-2 .bee-block-2,
+        .bee-row-8 .bee-col-3 .bee-block-2,
+        .bee-row-8 .bee-col-4 .bee-block-2 {
+            padding-top: 15px
+        }
+
+        .bee-row-10 .bee-col-2,
+        .bee-row-12 .bee-col-2,
+        .bee-row-6 .bee-col-2,
+        .bee-row-8 .bee-col-2 {
+            padding: 10px 25px
+        }
+
+        .bee-row-14 .bee-row-content,
+        .bee-row-15 .bee-row-content {
+            background-color: #f2f7f9;
+            background-repeat: no-repeat;
+            color: #000
+        }
+
+        .bee-row-14 .bee-col-1,
+        .bee-row-14 .bee-col-2,
+        .bee-row-14 .bee-col-3,
+        .bee-row-14 .bee-col-4,
+        .bee-row-14 .bee-col-5,
+        .bee-row-14 .bee-col-6 {
+            background-color: #f2f7f9;
+            padding: 10px 25px
+        }
+
+        .bee-row-14 .bee-col-1 .bee-block-3,
+        .bee-row-14 .bee-col-2 .bee-block-3,
+        .bee-row-14 .bee-col-3 .bee-block-3,
+        .bee-row-14 .bee-col-4 .bee-block-3,
+        .bee-row-14 .bee-col-5 .bee-block-3,
+        .bee-row-14 .bee-col-6 .bee-block-3 {
+            padding-top: 5px
+        }
+
+        .bee-row-15 .bee-col-1 {
+            background-color: #f2f7f9;
+            padding-left: 25px;
+            padding-right: 25px
+        }
+
+        .bee-row-15 .bee-col-1 .bee-block-1 {
+            padding-bottom: 20px;
+            padding-top: 25px
+        }
+
+        .bee-row-16 .bee-col-1,
+        .bee-row-16 .bee-col-2 {
+            background-color: #f2f7f9;
+            padding: 5px 25px
+        }
+
+        .bee-row-16 .bee-col-2 .bee-block-1 {
+            text-align: left
+        }
+
+        .bee-row-18,
+        .bee-row-19,
+        .bee-row-20 {
+            background-color: #0b4341;
+            background-repeat: no-repeat
+        }
+
+        .bee-row-19 .bee-col-1 .bee-block-2 {
+            padding-bottom: 10px;
+            padding-top: 25px
+        }
+
+        .bee-row-19 .bee-col-2 .bee-block-1 {
+            color: #fff;
+            font-family: inherit;
+            font-size: 18px;
+            padding-top: 10px;
+            text-align: right
+        }
+
+        .bee-row-19 .bee-col-2 .bee-block-2 {
+            padding: 15px 10px;
+            text-align: right
+        }
+
+        .bee-row-21 .bee-col-1 .bee-block-1 {
+            color: #9d9d9d;
+            font-family: inherit;
+            font-size: 15px;
+            padding-bottom: 5px;
+            padding-top: 5px;
+            text-align: center
+        }
+
+        .bee-row-1 .bee-col-2 .bee-block-1 li {
+            padding-bottom: 5px;
+            padding-left: 20px;
+            padding-right: 20px
+        }
+
+        .bee-row-19 .bee-col-2 .bee-block-1 li {
+            padding-bottom: 5px;
+            padding-right: 15px;
+            padding-top: 5px
+        }
+
+        .bee-row-19 .bee-col-2 .bee-block-1 li a {
+            color: #fff
+        }
+
+        @media (max-width:768px) {
+            .bee-menu ul.with-bee-hamburger {
+                display: none;
+                padding: 5px 0;
+                position: relative;
+                top: -4px
+            }
+
+            .bee-menu ul.with-bee-hamburger li {
+                display: block;
+                text-align: center
+            }
+
+            .bee-menu ul.with-bee-hamburger li a {
+                text-decoration: none
+            }
+
+            .bee-menu ul.with-bee-hamburger span {
+                display: none
+            }
+
+            #bee-hamburger-memu-r0c1m0:checked~ul,
+            .bee-row-content:not(.no_stack) {
+                display: block
+            }
+
+            .bee-row-1 .bee-col-2 .bee-block-1 .bee-hamburger-controls {
+                width: 36px;
+                height: 36px;
+                background-color: #f2f7f9;
+                border-radius: 0
+            }
+
+            .bee-row-1 .bee-col-2 .bee-block-1 .bee-hamburger-controls span,
+            .bee-row-19 .bee-col-2 .bee-block-1 .bee-hamburger-controls span {
+                width: 18px;
+                height: 18px
+            }
+
+            .bee-row-1 .bee-col-2 .bee-block-1 .bee-hamburger-controls span.bee-hamburger-open {
+                background-image: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjY0IiB2aWV3Qm94PSIwIDAgNjQgNjQiIHdpZHRoPSI2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjMGI0MzQxIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB3aWR0aD0iNjQiLz48cmVjdCBoZWlnaHQ9IjEyIiByeD0iNiIgd2lkdGg9IjY0IiB5PSI1MiIvPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB3aWR0aD0iNjQiIHk9IjI2Ii8+PC9nPjwvc3ZnPg==");
+                transform: translate(-50%, -50%) scaleY(1)
+            }
+
+            .bee-row-1 .bee-col-2 .bee-block-1 .bee-hamburger-controls span.bee-hamburger-close {
+                background-image: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjY0IiB2aWV3Qm94PSIwIDAgNjQgNjQiIHdpZHRoPSI2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjMGI0MzQxIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB0cmFuc2Zvcm09Im1hdHJpeCgtLjcwNzEwNjc4IC0uNzA3MTA2NzggLjcwNzEwNjc4IC0uNzA3MTA2NzggMzEuOTkxMzc4IDc3LjIzNDAxOSkiIHdpZHRoPSI4MiIgeD0iLTkuMDA4NjIyIiB5PSIyNS45OTEzNzgiLz48cmVjdCBoZWlnaHQ9IjEyIiByeD0iNiIgdHJhbnNmb3JtPSJtYXRyaXgoLS43MDcxMDY3OCAuNzA3MTA2NzggLS43MDcxMDY3OCAtLjcwNzEwNjc4IDc3LjgxOTgwNiAzMi4yMzQwMTkpIiB3aWR0aD0iODIiIHg9Ii04Ljc2NTk4MSIgeT0iMjYuMjM0MDE5Ii8+PC9nPjwvc3ZnPg==");
+                transform: translate(-50%, -50%) scaleY(0)
+            }
+
+            .bee-row-1 .bee-col-2 .bee-block-1 ul.with-bee-hamburger {
+                background-color: #f2f7f9
+            }
+
+            .bee-row-1 .bee-col-2 .bee-block-1 ul.with-bee-hamburger li,
+            .bee-row-1 .bee-col-2 .bee-block-1 ul.with-bee-hamburger li a {
+                color: #0b4341
+            }
+
+            #bee-hamburger-memu-r0c1m0:checked~.bee-hamburger-controls .bee-hamburger-open {
+                transform: translate(-50%, -50%) scaleY(0)
+            }
+
+            #bee-hamburger-memu-r0c1m0:checked~.bee-hamburger-controls .bee-hamburger-close {
+                transform: translate(-50%, -50%) scaleY(1)
+            }
+
+            .bee-row-19 .bee-col-2 .bee-block-1 .bee-hamburger-controls {
+                width: 36px;
+                height: 36px;
+                background-color: #000;
+                border-radius: 0
+            }
+
+            .bee-row-19 .bee-col-2 .bee-block-1 .bee-hamburger-controls span.bee-hamburger-open {
+                background-image: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjY0IiB2aWV3Qm94PSIwIDAgNjQgNjQiIHdpZHRoPSI2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjZmZmZmZmIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB3aWR0aD0iNjQiLz48cmVjdCBoZWlnaHQ9IjEyIiByeD0iNiIgd2lkdGg9IjY0IiB5PSI1MiIvPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB3aWR0aD0iNjQiIHk9IjI2Ii8+PC9nPjwvc3ZnPg==");
+                transform: translate(-50%, -50%) scaleY(1)
+            }
+
+            .bee-row-19 .bee-col-2 .bee-block-1 .bee-hamburger-controls span.bee-hamburger-close {
+                background-image: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjY0IiB2aWV3Qm94PSIwIDAgNjQgNjQiIHdpZHRoPSI2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjZmZmZmZmIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB0cmFuc2Zvcm09Im1hdHJpeCgtLjcwNzEwNjc4IC0uNzA3MTA2NzggLjcwNzEwNjc4IC0uNzA3MTA2NzggMzEuOTkxMzc4IDc3LjIzNDAxOSkiIHdpZHRoPSI4MiIgeD0iLTkuMDA4NjIyIiB5PSIyNS45OTEzNzgiLz48cmVjdCBoZWlnaHQ9IjEyIiByeD0iNiIgdHJhbnNmb3JtPSJtYXRyaXgoLS43MDcxMDY3OCAuNzA3MTA2NzggLS43MDcxMDY3OCAtLjcwNzEwNjc4IDc3LjgxOTgwNiAzMi4yMzQwMTkpIiB3aWR0aD0iODIiIHg9Ii04Ljc2NTk4MSIgeT0iMjYuMjM0MDE5Ii8+PC9nPjwvc3ZnPg==");
+                transform: translate(-50%, -50%) scaleY(0)
+            }
+
+            .bee-row-19 .bee-col-2 .bee-block-1 ul.with-bee-hamburger {
+                background-color: #000
+            }
+
+            .bee-row-19 .bee-col-2 .bee-block-1 ul.with-bee-hamburger li,
+            .bee-row-19 .bee-col-2 .bee-block-1 ul.with-bee-hamburger li a {
+                color: #fff
+            }
+
+            .bee-row-19 .bee-col-2 .bee-block-1,
+            .bee-row-19 .bee-col-2 .bee-block-2 {
+                text-align: left !important
+            }
+        }
+
+        .bee-row-21 .bee-col-1 .bee-block-1 .bee-icon-image {
+            padding: 5px 6px 5px 5px
+        }
+
+        .bee-row-21 .bee-col-1 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content {
+            margin-left: 0
+        }
+
+        .bee-row-21 .bee-col-1 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
+            margin-right: 0
+        }
+
+        .bee-row-23,
+        .bee-row-24 {
+            background-color: #f2f7f9
+        }
+
+        .bee-row-23 .bee-row-content {
+            border-radius: 0;
+            color: #000
+        }
+
+        .bee-row-23 .bee-col-1,
+        .bee-row-23 .bee-col-2,
+        .bee-row-23 .bee-col-3,
+        .bee-row-24 .bee-col-1,
+        .bee-row-24 .bee-col-2,
+        .bee-row-24 .bee-col-3,
+        .bee-row-24 .bee-col-4,
+        .bee-row-25 .bee-col-1 {
+            padding-bottom: 5px;
+            padding-top: 5px
+        }
+
+        .bee-row-23 .bee-col-2 .bee-block-1 {
+            padding: 10px;
+            text-align: center;
+            width: 100%
+        }
+
+        .bee-row-24 .bee-row-content,
+        .bee-row-25 .bee-row-content {
+            background-repeat: no-repeat;
+            color: #000
+        }
+
+        .bee-row-24 .bee-col-2 .bee-block-1,
+        .bee-row-24 .bee-col-3 .bee-block-1 {
+            padding: 10px
+        }
+
+
+
+
+
+
+
+
+        .bee-row-24 .bee-col-2 .bee-block-1,
+        .bee-row-24 .bee-col-3 .bee-block-1 {
+            color: #7c7c7f;
+            direction: ltr;
+            font-size: 15px;
+            font-weight: 400;
+            letter-spacing: 0;
+            line-height: 120%;
+            text-align: left
+        }
+
+        .bee-row-24 .bee-col-2 .bee-block-1 a,
+        .bee-row-24 .bee-col-3 .bee-block-1 a {
+            color: #7c7c7f
+        }
+
+        .bee-row-24 .bee-col-2 .bee-block-1 p:not(:last-child),
+        .bee-row-24 .bee-col-3 .bee-block-1 p:not(:last-child) {
+            margin-bottom: 6px
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bee-page-container">
+        <!-- Nav Bar -->
+        <div class="bee-row bee-row-1">
+            <div class="bee-row-content no_stack">
+                <div class="bee-col bee-col-1 bee-col-w6">
+                    <div class="bee-block bee-block-1 bee-image"><a href="http://www.example.com/" target="_self"><img
+                                alt="Logo" class="bee-fixedwidth" src="../static/logo.png"
+                                style="max-width:263px;" /></a></div>
+                </div>
+                <div class="bee-col bee-col-2 bee-col-w6">
+                    <div class="bee-block bee-block-1 bee-menu">
+                        <nav class="bee-menu"><input class="bee-hamburger-trigger" id="bee-hamburger-memu-r0c1m0"
+                                type="checkbox" /><label class="bee-hamburger-controls"
+                                for="bee-hamburger-memu-r0c1m0"><span class="bee-hamburger-open"></span><span
+                                    class="bee-hamburger-close"></span></label>
+                            <ul class="bee-horizontal with-bee-hamburger">
+                                {% if current_user.is_authenticated %}
+                                <li><a href="/cart" target="_self" title="">Your Cart</a></li>
+                                        <!-- <li><a href="" target="_self" title="">Profile</a></li> -->
+                                        <li> <a href="{{url_for('user_dashboard')}}" style="text-decoration: None; font-family: Montserrat;">Products
+                                    
+                                </a></li>
+                                        <li><a href="/logout" target="_self" title="">Logout</a></li>
+                                {% else %}
+                                <!-- Do something which you want to do with unauthenticated user -->
+                                <li><a href="/login" target="_self" title="">Login</a></li>
+                                <li><a href="/register" target="_self" title="">Register</a></li>
+                                {% endif %}
+
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Promo code -->
+        <div class="bee-row bee-row-2">
+            <div class="bee-row-content">
+                <div class="bee-col bee-col-1 bee-col-w5">
+                    <div class="bee-block bee-block-1 bee-heading">
+                        <h1
+                            style="color:#0b4341;direction:ltr;font-family:Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;font-size:48px;font-weight:400;letter-spacing:normal;line-height:120%;text-align:center;margin-top:0;margin-bottom:0;">
+                            <span class="tinyMce-placeholder">Welcome to the grocerystore
+                        </h1>
+                    </div>
+                    <div class="bee-block bee-block-2 bee-divider">
+                        <div class="center bee-separator" style="border-top:1px solid #0B4341;width:95%;"></div>
+                    </div>
+                    <div class="bee-block bee-block-3 bee-text">
+                        <div class="bee-text-content"
+                            style="line-height: 150%; font-size: 12px; font-family: inherit; color: #111111;">
+                            <p style="font-size: 14px; line-height: 21px; text-align: center;"><span
+                                    style="font-size: 18px; line-height: 27px;">Enjoy online shopping</span></p>
+                            <p style="font-size: 14px; line-height: 21px; text-align: center;"><span
+                                    style="font-size: 18px; line-height: 27px;"></span></p>
+                        </div>
+                    </div>
+                    <div class="bee-block bee-block-4 bee-button"><a class="bee-button-content"
+                            href="{{url_for('user_dashboard')}}"
+                            style="font-size: 12px; background-color: #0b4341; border-bottom: 1px solid #0B4341; border-left: 1px solid #0B4341; border-radius: 8px; border-right: 1px solid #0B4341; border-top: 1px solid #0B4341; color: #ffffff; direction: ltr; font-family: inherit; font-weight: 400; max-width: 100%; padding-bottom: 10px; padding-left: 40px; padding-right: 40px; padding-top: 10px; width: auto; display: inline-block;"
+                            target="_self"><span
+                                style="font-size: 16px; word-break: break-word; line-height: 200%;"><strong><span
+                                        style="font-size:18px;">Shop</span></strong></span></a></div>
+                </div>
+                <div class="bee-col bee-col-2 bee-col-w7">
+                    <div class="bee-block bee-block-1 bee-image"><img alt="Salad" class="bee-center bee-autowidth"
+                            src="../static/vegies.png" style="max-width:480px;" /></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Light green background Spacer -->
+        <div class="bee-row bee-row-17">
+            <div class="bee-row-content">
+                <div class="bee-col bee-col-1 bee-col-w12">
+                    <div class="bee-block bee-block-1 bee-divider">
+                        <div class="spacer" style="height:60px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shop now title -->
+        <div class="bee-row bee-row-4">
+            <div class="bee-row-content">
+                <div class="bee-col bee-col-1 bee-col-w12">
+                    <div class="bee-block bee-block-1 bee-heading">
+                        <h2
+                            style="color:#0b4341;direction:ltr;font-family:Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;font-size:32px;font-weight:normal;letter-spacing:normal;line-height:120%;text-align:center;margin-top:0;margin-bottom:0;">
+                            <strong>Shop Now</strong>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="container" style="background-color: #f2f7f9; text-align: center;">
+
+            <div class="row row-cols-1 row-cols-md-6 g-4" style="padding:30px">
+                {% for product in products %}
+
+
+                <div class="col">
+                    <div class="card h-100" style="background-color: #f2f7f9; border: None;">
+                        <img src="{{ url_for('get_image', filename=product.prod_name)}}" class="card-img-top"
+                            alt="Uploaded Image">
+                        <div class="card-body" style="background-color: #f1f1f3;">
+						<a href="{{url_for('product',prod_id=product.prod_id)}}" style="text-decoration: None; color: black; font-family: Montserrat ;">
+
+                            <h5 class="card-title"></h5>
+                            <p class="card-text">{{product.prod_name}}</p>
+                            </a>
+                        </div>
+                        <div class="card-footer" style="border: None; ;">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-currency-rupee" viewBox="0 0 16 16">
+                                <path
+                                    d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z" />
+                            </svg>{{product.rate_per_unit}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                            <a href="{{ url_for('add_to_cart',prod_id=product.prod_id) }}"
+                                style='background-color: #0b4341; border:none;' class="btn btn-primary">Buy</a>
+
+                        </div>
+                    </div>
+                </div>
+
+                {% endfor %}
+
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Light green background Spacer -->
+        <div class="bee-row bee-row-17">
+            <div class="bee-row-content">
+                <div class="bee-col bee-col-1 bee-col-w12">
+                    <div class="bee-block bee-block-1 bee-divider">
+                        <div class="spacer" style="height:60px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Categories -->
+        <div class="bee-row bee-row-23">
+            <div class="bee-row-content">
+                <div class="bee-col bee-col-1 bee-col-w3">
+                    <div class="bee-block bee-block-1 bee-spacer">
+                        <div class="spacer" style="height:60px;"></div>
+                    </div>
+                </div>
+                <div class="bee-col bee-col-2 bee-col-w6">
+                    <div class="bee-block bee-block-1 bee-heading">
+                        <h2
+                            style="color:#0b4341;direction:ltr;font-family:'Montserrat', 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;font-size:30px;font-weight:700;letter-spacing:normal;line-height:120%;text-align:left;margin-top:0;margin-bottom:0;">
+                            <span class="tinyMce-placeholder">Categories</span>
+                            <span style="font-size: large; color: purple; padding-inline-start: 90px;">
+                                <a href="{{url_for('user_dashboard')}}" style="text-decoration: None; color: purple;">see all
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                                        class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                    </svg>
+                                </a>
+                            </span>
+                        </h2>
+                    </div>
+                </div>
+                <div class="bee-col bee-col-3 bee-col-w3">
+                    <div class="bee-block bee-block-1 bee-spacer">
+                        <div class="spacer" style="height:60px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bee-row bee-row-24">
+            <div class="bee-row-content">
+                <div class="bee-col bee-col-1 bee-col-w3">
+                    <div class="bee-block bee-block-1 bee-spacer">
+                        <div class="spacer" style="height:60px;"></div>
+                    </div>
+                </div>
+                <div class="bee-col bee-col-2 bee-col-w3">
+                    <div class="bee-block bee-block-1 bee-paragraph">
+               
+                    {% if len>=8  %}
+                        {% for i in range(8) %}
+                        <p><a href="{{ url_for('display_cat',cat_id=categories[i].cat_id)}}" style="text-decoration: None;">{{ categories[i].cat_name }}</a></p>
+                        {% endfor %}
+                    {% else %}
+
+                    {% endif %}
+
+                    </div>
+                </div>
+               
+                <div class="bee-col bee-col-4 bee-col-w3">
+                    <div class="bee-block bee-block-1 bee-spacer">
+                        <div class="spacer" style="height:60px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Light green background Spacer -->
+        <div class="bee-row bee-row-17">
+            <div class="bee-row-content">
+                <div class="bee-col bee-col-1 bee-col-w12">
+                    <div class="bee-block bee-block-1 bee-divider">
+                        <div class="spacer" style="height:60px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Dark green background Spacer -->
+        <div class="bee-row bee-row-18">
+            <div class="bee-row-content">
+                <div class="bee-col bee-col-1 bee-col-w12">
+                    <div class="bee-block bee-block-1 bee-divider">
+                        <div class="spacer" style="height:40px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Footer -->
+        <div class="bee-row bee-row-19">
+            <div class="bee-row-content reverse">
+                <div class="bee-col bee-col-1 bee-col-w5">
+                    <div class="bee-block bee-block-1 bee-image"><a href="" target="_self"><img
+                                alt="Logo" class="bee-fixedwidth"
+                                src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/7286/grocerystore.png"
+                                style="max-width:230px;" /></a></div>
+                    <div class="bee-block bee-block-2 bee-text">
+                        <div class="bee-text-content"
+                            style="line-height: 120%; font-size: 12px; font-family: inherit; color: #ffffff;">
+                            <p style="font-size: 14px; line-height: 16px; text-align: left;"><span
+                                    style="font-size: 16px; line-height: 19px;">2023 © All rights reserved</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bee-col bee-col-2 bee-col-w7">
+                    <div class="bee-block bee-block-1 bee-menu">
+                        <nav class="bee-menu">
+                            <ul class="bee-horizontal">
+                                <li><a href="/products" target="_self" title="">Store</a></li>
+                                <!-- <li><a href="http://www.example.com/" target="_self" title="">Blog</a></li>
+                                <li><a href="#" target="_self" title="">Recipes</a></li>
+                                <li><a href="http://www.example.com/" target="_self" title="">Order now</a></li> -->
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="bee-block bee-block-2 bee-social">
+                        <div class="content"><span class="icon" style="padding:0 7.5px 0 7.5px;"><a
+                                    href="https://www.facebook.com/" target="_self"><img alt="Facebook"
+                                        src="../static/facebook.png" title="facebook" /></a></span><span class="icon"
+                                style="padding:0 7.5px 0 7.5px;"><a href="https://www.twitter.com/" target="_self"><img
+                                        alt="Twitter" src="../static/twitter.png" title="twitter" /></a></span><span
+                                class="icon" style="padding:0 7.5px 0 7.5px;"><a href="https://www.instagram.com/"
+                                    target="_self"><img alt="Instagram" src="../static/instagram.png"
+                                        title="instagram" /></a></span><span class="icon"
+                                style="padding:0 7.5px 0 7.5px;"><a href="https://www.youtube.com/" target="_self"><img
+                                        alt="YouTube" src="../static/youtube.png" title="YouTube" /></a></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dark green background Spacer -->
+        <div class="bee-row bee-row-20">
+            <div class="bee-row-content">
+                <div class="bee-col bee-col-1 bee-col-w12">
+                    <div class="bee-block bee-block-1 bee-divider">
+                        <div class="spacer" style="height:40px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

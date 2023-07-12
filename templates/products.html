@@ -1,0 +1,63 @@
+{% extends 'admin_dashboard.html' %}
+{% block content%}
+<div class="bee-block bee-block-1 bee-heading">
+    <h1
+        style="color:#5d5e5e;direction:ltr;font-family:Arial, Helvetica, sans-serif;font-size:44px;font-weight:700;letter-spacing:normal;line-height:120%;text-align:left;margin-top:0;margin-bottom:0;">
+        <span class="tinyMce-placeholder">Products</span>
+    </h1>
+</div>
+
+<div class="bee-block bee-block-2 bee-paragraph">
+    <p>
+    <div style="text-align: right;">
+        <a href="{{ url_for('select_category' )}}"><button
+                style="background-color: #0b4341;color:aliceblue; border-radius: 0;">Add a Product</button></a>
+    </div>
+    </p>
+</div>
+<br>
+<br>
+
+<div class="bee-block bee-block-3 bee-html-block">
+    <div class="our-class">
+        <div class="container" style="background-color: #f2f7f9; text-align: center; padding-left: 30px;">
+
+            <div class="row row-cols-1 row-cols-md-5 g-4">
+                {% for product in products %}
+
+
+                <div class="col">
+                    <div class="card h-100" style="background-color: #f2f7f9; border: None;">
+                        <img src="{{ url_for('get_image', filename=product.prod_name)}}" class="card-img-top"
+                            alt="Uploaded Image">
+                        <div class="card-body" style="background-color: #f1f1f3;">
+                            <!-- <a href="{{url_for('product',prod_id=product.prod_id)}}" style="text-decoration: None; color: black; font-family: Montserrat ;"> -->
+
+                            <h5 class="card-title"></h5>
+                            <p class="card-text">{{product.prod_name}}</p>
+                            <!-- </a> -->
+                        </div>
+                        <div class="card-footer" style="border: None; ;">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-currency-rupee" viewBox="0 0 16 16">
+                                <path
+                                    d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z" />
+                            </svg>{{product.rate_per_unit}}{{ product.unit[2:]}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            
+                            <a href="{{url_for('edit_prod',prod_id=product.prod_id)}}"
+                                style='background-color: #0b4341; border:none;' class="btn btn-primary">View</a>
+
+                        </div>
+                    </div>
+                </div>
+
+                {% endfor %}
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
